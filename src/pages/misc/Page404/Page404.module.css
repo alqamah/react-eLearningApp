@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+body div > * {
+  margin: 1rem;
+}
+
+body p{
+  color:var(--clr-text-secondary)
+}
+
+h1, h2{
+  color: var(--clr-text-main);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-accent);
+  color: var(--clr-text-main);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  width: max-content;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--clr-accent-hover);
+}
