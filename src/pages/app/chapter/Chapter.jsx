@@ -2,10 +2,14 @@ import React from "react";
 import styles from "./Chapter.module.css";
 import { useParams } from "react-router-dom";
 import coursesData from "../../../data/courses.json";
+import { useOutletContext } from "react-router-dom";
 
 function Chapter() {
    const {id ,chapterId} = useParams();
-   const course = coursesData.find((c) => c.id === id); 
+  //  const course = coursesData.find((c) => c.id === id); 
+  //  const chapter = course.chapters.find((ch)=> ch.chapter == chapterId);
+   
+   const course = useOutletContext();
    const chapter = course.chapters.find((ch)=> ch.chapter == chapterId);
 
    return (

@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Learn.module.css";
 import coursesData from "../../../data/courses.json";
 // Task4: Import all the required elements from the react-router-dom
-import { NavLink, useParams, Outlet } from "react-router-dom";
+import { NavLink, useParams, Outlet, useOutletContext } from "react-router-dom";
 
 function Learn() {
   const {id} = useParams();
@@ -36,7 +36,7 @@ function Learn() {
       <div className={style.courses}>
         {/**Task5:  Chapter Details Must be rendered here using Outlet and Link*/
           // ch.details
-          <Outlet/>
+          < Outlet context={course} />
         }
       </div>
     </div>
